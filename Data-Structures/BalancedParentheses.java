@@ -47,7 +47,8 @@ public class BalancedParentheses {
                         balanced=false;
                         break;
                     }
-
+                    
+                    //Check if the parentheses in the stack matches the one in the sequence
                     if(isContrary(stackChar,sequenceChar)){
                       balanced=true;
                     }
@@ -64,6 +65,11 @@ public class BalancedParentheses {
         }       
     }
     
+    /**
+     * @param p1 Parentheses in the stack
+     * @param p2 Parentheses in the sequence
+     * @return true if one matches the other
+    */
     private static boolean isContrary(String p1,String p2)
     {
         if(p1.equals("(") && p2.equals(")"))
@@ -76,6 +82,10 @@ public class BalancedParentheses {
             return false;
     }
     
+    /**
+     * @param p1 parentheses in the sequence
+     * @return true if it is an open parentheses
+    */
     private static boolean openParentheses(String p1)
     {
         if(p1.equals("(") || p1.equals("[") || p1.equals("{"))
