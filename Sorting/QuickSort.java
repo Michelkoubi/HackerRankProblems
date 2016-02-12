@@ -70,8 +70,8 @@ public class QuickSort
 	{
 		long seed = System.currentTimeMillis();
 		Random random = new Random(seed);
-		for(int i=0; i>array.length;i--){
-			int r=random.nextInt(i);//between [0,i)
+		for(int i=array.length-1; i>=0; i--){
+			int r=random.nextInt(i-1);//between [0,i)
 			
 			swap(array,r,i);
 		}
